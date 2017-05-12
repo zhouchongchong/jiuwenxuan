@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.jiuwenxuan.wenbo.dao.DybastyMapper">
-  <resultMap id="BaseResultMap" type="com.jiuwenxuan.wenbo.domain.Dybasty">
+<mapper namespace="com.jiuwenxuan.wenbo.dao.DynastyMapper">
+  <resultMap id="BaseResultMap" type="com.jiuwenxuan.wenbo.domain.Dynasty">
     <id column="d_id" jdbcType="INTEGER" property="dId" />
     <result column="d_name" jdbcType="VARCHAR" property="dName" />
     <result column="d_createtime" jdbcType="TIMESTAMP" property="dCreatetime" />
@@ -20,13 +20,13 @@
     delete from tb_dynasty
     where d_id = #{dId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.jiuwenxuan.wenbo.domain.Dybasty">
+  <insert id="insert" parameterType="com.jiuwenxuan.wenbo.domain.Dynasty">
     insert into tb_dynasty (d_id, d_name, d_createtime, 
       isdelete)
     values (#{dId,jdbcType=INTEGER}, #{dName,jdbcType=VARCHAR}, #{dCreatetime,jdbcType=TIMESTAMP}, 
       #{isdelete,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="com.jiuwenxuan.wenbo.domain.Dybasty">
+  <insert id="insertSelective" parameterType="com.jiuwenxuan.wenbo.domain.Dynasty">
     insert into tb_dynasty
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="dId != null">
@@ -57,7 +57,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.jiuwenxuan.wenbo.domain.Dybasty">
+  <update id="updateByPrimaryKeySelective" parameterType="com.jiuwenxuan.wenbo.domain.Dynasty">
     update tb_dynasty
     <set>
       <if test="dName != null">
@@ -72,7 +72,7 @@
     </set>
     where d_id = #{dId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.jiuwenxuan.wenbo.domain.Dybasty">
+  <update id="updateByPrimaryKey" parameterType="com.jiuwenxuan.wenbo.domain.Dynasty">
     update tb_dynasty
     set d_name = #{dName,jdbcType=VARCHAR},
       d_createtime = #{dCreatetime,jdbcType=TIMESTAMP},
