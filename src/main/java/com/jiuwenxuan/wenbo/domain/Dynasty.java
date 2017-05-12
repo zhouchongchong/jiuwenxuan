@@ -2,7 +2,7 @@ package com.jiuwenxuan.wenbo.domain;
 
 import java.util.Date;
 
-public class Dybasty {
+public class Dynasty {
     private Integer dId;
 
     private String dName;
