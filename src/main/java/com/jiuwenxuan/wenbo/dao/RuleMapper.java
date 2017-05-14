@@ -1,5 +1,7 @@
 package com.jiuwenxuan.wenbo.dao;
 
+import java.util.List;
+
 import com.jiuwenxuan.wenbo.domain.Rule;
 
 public interface RuleMapper {
@@ -14,4 +16,7 @@ public interface RuleMapper {
     int updateByPrimaryKeySelective(Rule record);
 
     int updateByPrimaryKey(Rule record);
+    
+    List<Rule> getRules();
+    
 }

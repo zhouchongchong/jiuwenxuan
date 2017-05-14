@@ -18,7 +18,19 @@ package com.jiuwenxuan.wenbo.service;
  * @since    JDK 1.8  
  * @see        
  */
-public interface IDynastyService {
 
+import java.util.List;
+
+import com.jiuwenxuan.wenbo.domain.Dynasty;
+
+public interface IDynastyService {
+	
+	/**  
+	 * searchAllDynasty:返回所有未删除的朝代. <br/>    
+	 * @author zhouchong  
+	 * @return  list
+	 * @since JDK 1.8  
+	 */
+	public List<Dynasty> searchAllDynasty();
 }
   

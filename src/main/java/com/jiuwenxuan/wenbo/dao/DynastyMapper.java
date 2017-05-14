@@ -1,5 +1,7 @@
 package com.jiuwenxuan.wenbo.dao;
 
+import java.util.List;
+
 import com.jiuwenxuan.wenbo.domain.Dynasty;
 
 public interface DynastyMapper {
@@ -14,4 +16,6 @@ public interface DynastyMapper {
     int updateByPrimaryKeySelective(Dynasty record);
 
     int updateByPrimaryKey(Dynasty record);
+    
+    List<Dynasty> selectAllDynasty();
 }

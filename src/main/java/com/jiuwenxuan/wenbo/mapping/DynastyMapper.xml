@@ -16,6 +16,13 @@
     from tb_dynasty
     where d_id = #{dId,jdbcType=INTEGER}
   </select>
+  <!-- 查询所有朝代 -->
+  <select id="selectAllDynasty" >
+  	select
+  	*
+  	from tb_dynasty
+  	where isdelete = 0
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from tb_dynasty
     where d_id = #{dId,jdbcType=INTEGER}
